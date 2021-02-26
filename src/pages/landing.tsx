@@ -1,28 +1,17 @@
 
-import {useEffect} from "react";
-
-//redux
-import {useDispatch, useSelector } from 'react-redux'
-import {RootState} from "../reducers/index";
-
-//actions
-import {fetchTopData} from "../actions/index";
+//components
+import TopSection from "../components/TopSection";
+import AboutSection from "../components/AboutSection";
+import PositionsSection from "../components/PositionsSection";
 
 const Landing = () => {
 
-    const dispatch = useDispatch();
-    const topData = useSelector((state: RootState)=> state.data);
-    
-    useEffect(() => {
-        
-        dispatch(fetchTopData());
-        
-    }, [dispatch])
-
-    console.log(topData);
-
     return(
-        <div>{topData.mainHeader}</div>
+        <div id="content">
+            <TopSection/>
+            <AboutSection/>
+            <PositionsSection/>
+        </div>
     )
 
 }

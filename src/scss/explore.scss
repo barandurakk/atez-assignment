@@ -1,0 +1,29 @@
+@import './variables';
+@import './mixin';
+
+#explore-container {
+    width: 750px;
+    height: auto;
+    div {
+        color: #fff;
+        line-height: 1.5;
+        h1 {
+            font-size: 38px;
+            margin-bottom: 50px;
+        }
+        h3 {
+            margin-bottom: 50px;
+            width: 400px;
+            font-weight: 400;
+        }
+        a {
+            @include primary-button;
+            border-color: #bce0fd;
+            padding: 12px 40px;
+            font-weight: 600;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    }
+}

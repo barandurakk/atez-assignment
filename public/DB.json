@@ -1,18 +1,27 @@
 {
-    "topSection": {
-        "mainHeader": "Yeni Nesil Uluslararası Ticaret ve Tedarik Zinciri Teknolojileri",
-        "explore":{"exploreText": "ATEZ global ölçekli çözümler üretme hedefi ile çalışmalarını sürdürmektedir", "exploreButtonText": "KEŞFET"},
-        "news":{"newsHeader":  "2020 Yaz Stajı", "newsText": "lorem ipsum dolor sit amet, sunt in culpa qui offical derenut akma prova", "newsBtnText": "BAŞVURMAK İÇİN TIKLA" } 
+    "topSection": { 
+        "explore":{
+            "exploreText": "ATEZ global ölçekli çözümler üretme hedefi ile çalışmalarını sürdürmektedir", 
+            "exploreButtonText": "KEŞFET",
+            "mainHeader": "Yeni Nesil Uluslararası Ticaret ve Tedarik Zinciri Teknolojileri"},
+        "news":
+        {"newsHeader":  "2020 Yaz Stajı", 
+            "newsText": "lorem ipsum dolor sit amet, sunt in culpa qui offical derenut akma prova", 
+            "newsBtnText": "BAŞVURMAK İÇİN TIKLA" } 
     },
     "aboutUsSection": {
-        "aboutUsText":"dasdasd",
-        "aboutUsImgs": []
+        "aboutUsText":{"h1": "BİZ KİMİZ?",
+                         "p1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam malesuada ligula at nibh gravida accumsan. Ut dignissim id urna non pretium. Suspendisse potenti. Integer vel justo est. Donec eget tincidunt quam. Morbi volutpat purus eu tincidunt volutpat. Quisque sit amet nulla orci. Suspendisse porttitor hendrerit purus, id venenatis est tempus id. ",
+                        "p2": "Nulla in felis lacinia, suscipit nisl ut, mattis ligula. Maecenas porta nibh sed ullamcorper aliquet. Nunc eget sapien tincidunt, mattis lorem nec, auctor lacus. Duis id justo imperdiet, tincidunt metus in, eleifend turpis. Sed malesuada diam vitae tortor cursus, et fermentum ex fringilla. Nullam venenatis eros in orci volutpat, et facilisis nisi dignissim.",
+                        "btnText": "BAŞVURULAR"    
+                    }
     },
     "openPositions": [
-        {"title": "Back-End Developer", "isNew": false, "isOnline":true, "body": "asdasdasdas"},
-        {"title": "2020 Yaz Stajı", "isNew": true, "isOnline":true, "body": "asdasda"},
-        {"title": "DevOps", "isNew": false, "isOnline":true, "body": "asdasda"},
-        {"title": "Bussiness Analyst", "isNew": false, "isOnline":true, "body": "asdasd"},
-        {"title": "Örnek Açık Pozisyon", "isNew": false, "isOnline":true, "body": "asdadas"}
+        {"id": 1, "title": "Back-End Developer", "isNew": false, "isPublished":true, "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id massa lectus. Donec at suscipit metus, egestas pellentesque ipsum. Sed massa purus, lobortis sit amet nisl vitae, accumsan dictum lectus. Donec id diam justo. Etiam fringilla vehicula pretium. Sed eu augue lobortis nisl feugiat mattis quis vitae arcu. Duis sed magna ac felis vestibulum blandit. Aenean ut libero a mi egestas elementum. Nulla imperdiet quam eu bibendum faucibus. Sed orci magna, tincidunt sed lacus consequat, blandit finibus dui."},
+        {"id": 2,"title": "2020 Yaz Stajı", "isNew": true, "isPublished":true, "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum aliquam elit turpis, vel volutpat arcu elementum eget. Proin a diam eu dui rutrum elementum in id mi. Duis elementum sollicitudin elit, at sagittis est luctus ut. Praesent et auctor mi. Sed quam sapien, vehicula ac maximus a, cursus ac metus. Donec commodo tellus ultrices arcu porta fermentum. Curabitur placerat augue ut efficitur porttitor.  Nulla imperdiet quam eu bibendum faucibus. Sed orci magna, tincidunt sed lacus consequat, blandit finibus dui."},
+        {"id": 3,"title": "DevOps", "isNew": false, "isPublished":true, "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sed magna et justo aliquam vulputate in ut sapien. Phasellus vitae dolor eu felis finibus efficitur non nec arcu. Vivamus pulvinar congue mauris id scelerisque. Aliquam eget magna ultrices, iaculis purus ut, luctus nibh. In blandit mauris id rutrum auctor. Quisque eget eros enim. Nullam turpis diam, sodales et placerat ac, efficitur at nunc. Fusce fermentum fringilla ex sit amet aliquet. Donec lacinia non erat eget condimentum. In ac tortor eu leo laoreet"},
+        {"id": 4,"title": "Bussiness Analyst", "isNew": false, "isPublished":true, "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id massa lectus. Donec at suscipit metus, egestas pellentesque ipsum. Sed massa purus, lobortis sit amet nisl vitae, accumsan dictum lectus. Donec id diam justo. Etiam fringilla vehicula pretium. Sed eu augue lobortis nisl feugiat mattis quis vitae arcu. Duis sed magna ac felis vestibulum blandit. Aenean ut libero a mi egestas elementum. Nulla imperdiet quam eu bibendum faucibus. Sed orci magna, tincidunt sed lacus consequat, blandit finibus dui."},
+        {"id": 5,"title": "Örnek Kapalı Pozisyon", "isNew": false, "isPublished":false, "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id massa lectus. Donec at suscipit metus, egestas pellentesque ipsum. Sed massa purus, lobortis sit amet nisl vitae, accumsan dictum lectus. Donec id diam justo. Etiam fringilla vehicula pretium. Sed eu augue lobortis nisl feugiat mattis quis vitae arcu. Duis sed magna ac felis vestibulum blandit. Aenean ut libero a mi egestas elementum. Nulla imperdiet quam eu bibendum faucibus. Sed orci magna, tincidunt sed lacus consequat, blandit finibus dui."},
+        {"id": 6,"title": "Örnek Açık Pozisyon", "isNew": true, "isPublished":true, "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse id massa lectus. Donec at suscipit metus, egestas pellentesque ipsum. Sed massa purus, lobortis sit amet nisl vitae, accumsan dictum lectus. Donec id diam justo. Etiam fringilla vehicula pretium. Sed eu augue lobortis nisl feugiat mattis quis vitae arcu. Duis sed magna ac felis vestibulum blandit. Aenean ut libero a mi egestas elementum. Nulla imperdiet quam eu bibendum faucibus. Sed orci magna, tincidunt sed lacus consequat, blandit finibus dui."}
     ]
 }

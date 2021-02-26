@@ -1,0 +1,32 @@
+@import './variables';
+@import './mixin';
+
+#positions-section {
+    .positions-container {
+        padding: 0px 0px 60px 0px;
+        @include flex-row;
+        justify-content: space-between;
+        align-items: center;
+        .positionsList-container {
+            box-sizing: border-box;
+            width: 40%;
+            min-width: 350px;
+            margin-right: 120px;
+            h1 {
+                margin-left: 30px;
+                font-size: 40px;
+                font-weight: 600;
+                margin-bottom: 80px;
+            }
+        }
+    }
+    .positionsImage-container {
+        display: flex;
+        justify-content: center;
+        img {
+            position: relative;
+            top: -150px;
+            left: -150px;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export const actionSVG = <svg  width="16" height="16" viewBox="0 0 16 16"><defs><clipPath id="a"><rect width="16" height="16"/></clipPath></defs><g ><path d="M8,0,6.545,1.455l5.506,5.506H0V9.039H12.052L6.545,14.545,8,16l8-8Z"/></g></svg>

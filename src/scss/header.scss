@@ -2,23 +2,43 @@
 @import './mixin';
 
 #header {
+    position: fixed;
+    top: 0;
     display: flex;
     width: 100%;
     padding: 15px 0px;
     height: 55px;
-    background-color: #fff;
+    background-color: rgba(#fff, $alpha: 0.8);
     justify-content: center;
+    z-index: 200;
+    box-shadow: 0px 3px 16px #0000000a;
+    backdrop-filter: blur(50px);
+    &.panel {
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        .navMenu-wrapper {
+            display: none;
+        }
+    }
     #header-content {
         @include flex-row;
         align-items: center;
         justify-content: space-between;
         width: 1200px;
         margin: 0px auto;
+        .branding-wrapper {
+            img {
+                width: 210px;
+                height: 55.22px;
+            }
+        }
         .navMenu-wrapper {
             ul {
                 list-style: none;
                 @include flex-row;
                 font-weight: 600;
+                font-size: 17px;
                 margin: 0px;
                 li {
                     margin: 0px 30px;

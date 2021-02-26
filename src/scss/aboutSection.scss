@@ -1,0 +1,79 @@
+@import './variables.scss';
+@import './mixin';
+
+#about-section {
+    .about-container {
+        padding: 60px 0px;
+        @include flex-column;
+        .about-content {
+            @include flex-row;
+            .about-header-wrapper {
+                @include flex-column;
+                justify-content: flex-end;
+                width: 30%;
+                h1 {
+                    font-size: 60px;
+                    font-weight: 600;
+                    color: $dark-purple;
+                    font-style: italic;
+                    margin: 5px 0px;
+                }
+                div {
+                    height: 5px;
+                    width: 70%;
+                    background-color: $dark-purple;
+                    margin-bottom: 16px;
+                }
+            }
+            .about-text-wrapper {
+                @include flex-column;
+                width: 70%;
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 1.8;
+                }
+            }
+        }
+        .about-images-wrapper {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(8, auto);
+            grid-template-rows: repeat(2, auto);
+            row-gap: 20px;
+            margin-top: 80px;
+            div {
+                width: 135px;
+                height: 135px;
+                box-shadow: 0px 3px 16px #0000000a;
+                background-color: #fff;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        .action-wrapper {
+            @include flex-row;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 90px;
+            span {
+                font-size: 18px;
+                font-weight: 600;
+                margin-right: 30px;
+            }
+            a {
+                @include primary-button;
+                border-color: $font-blue;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 65px;
+                height: 36px;
+                svg {
+                    fill: $font-blue;
+                }
+            }
+        }
+    }
+}

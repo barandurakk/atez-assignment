@@ -1,23 +1,29 @@
-import {Link} from "react-router-dom";
+import React from "react"
+import {Link, useLocation} from "react-router-dom";
+import LogoSvg from "../svg/Logo.svg";
 
 //style
 import "../scss/header.scss";
 
-const Header = () => {
+
+const Header: React.FC= () => {
+const {pathname} = useLocation();  
 
     return(
-        <div id="header">
+        //eğer paneldeyse header'ın stilini değiştiriyorum.
+        <div id="header" className={`${pathname === "/panel" && "panel" }`}>
             <div id="header-content">
                 <div className="branding-wrapper">
-                    <img src="#" alt="Atez Logo" />
-                </div>
-                <div className="navMenu-wrapper">
+                    <img src={LogoSvg} alt="Atez Logo" />
+                </div>       
+                    <div className="navMenu-wrapper">
                     <ul>
                         <li><Link to="/panel">YÖNETİCİ PANELİ</Link></li>
                         <li>BİZ KİMİZ?</li>
                         <li>AÇIK POZİSYONLAR</li>
                     </ul>
                 </div>
+                            
             </div>
         </div>
     )

@@ -1,22 +1,11 @@
 import {
     FETCH_TOP_DATA,
+    FETCH_ABOUT_DATA,
+    FETCH_POSITIONS_DATA
     } from "../actions/types";
 
 const initialState:any = {
-    
-        // topSection:{
-        //     mainHeader:"",
-        //     explore:{exploreText:"", exploreButtonText:""},
-        //     news: {newsHeader:"", newsText:"", newsBtnText:""},  
-        // },
-        // aboutSection: {
-        //     aboutUsText:"",
-        //     aboutUsImgs:[],  
-        // },
-        // openPositionSection: [
-        //     {title: "", isNew: false, isOnline: false, body:""}
-        // ]
-      
+        
 } 
 
 const dataReducer = (state = initialState, action:any) => {
@@ -28,7 +17,23 @@ const dataReducer = (state = initialState, action:any) => {
           //Normalde database'den sadece topData'yı çekerdik bunu simule etmek için burada filtreliyorum
           return {
               ...state,
-              ...action.payload.topSection
+              topData: action.payload.topSection
+          };
+
+          case FETCH_ABOUT_DATA:
+            
+          //Normalde database'den sadece aboutUs'ı çekerdik bunu simule etmek için burada filtreliyorum
+          return {
+              ...state,
+              aboutData: action.payload.aboutUsSection
+          };
+
+          case FETCH_POSITIONS_DATA:
+            
+          //Normalde database'den sadece openPositions'u çekerdik bunu simule etmek için burada filtreliyorum
+          return {
+              ...state,
+              positionList: action.payload.openPositions
           };
     
         default:

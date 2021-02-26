@@ -2,8 +2,8 @@
 
 @mixin primary-button {
     background-color: transparent;
-    border-radius: 25%;
-    border-width: 1px;
+    border-radius: 50px;
+    border-width: 2px;
     border-style: solid;
 }
 
@@ -15,4 +15,12 @@
 @mixin flex-column {
     display: flex;
     flex-direction: column;
+}
+
+@mixin styledLabel {
+    padding: 3px 6px;
+    background-color: $font-blue;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
 }
