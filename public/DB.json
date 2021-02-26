@@ -1,0 +1,18 @@
+{
+    "topSection": {
+        "mainHeader": "Yeni Nesil Uluslararası Ticaret ve Tedarik Zinciri Teknolojileri",
+        "explore":{"exploreText": "ATEZ global ölçekli çözümler üretme hedefi ile çalışmalarını sürdürmektedir", "exploreButtonText": "KEŞFET"},
+        "news":{"newsHeader":  "2020 Yaz Stajı", "newsText": "lorem ipsum dolor sit amet, sunt in culpa qui offical derenut akma prova", "newsBtnText": "BAŞVURMAK İÇİN TIKLA" } 
+    },
+    "aboutUsSection": {
+        "aboutUsText":"dasdasd",
+        "aboutUsImgs": []
+    },
+    "openPositions": [
+        {"title": "Back-End Developer", "isNew": false, "isOnline":true, "body": "asdasdasdas"},
+        {"title": "2020 Yaz Stajı", "isNew": true, "isOnline":true, "body": "asdasda"},
+        {"title": "DevOps", "isNew": false, "isOnline":true, "body": "asdasda"},
+        {"title": "Bussiness Analyst", "isNew": false, "isOnline":true, "body": "asdasd"},
+        {"title": "Örnek Açık Pozisyon", "isNew": false, "isOnline":true, "body": "asdadas"}
+    ]
+}
