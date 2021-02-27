@@ -1,13 +1,10 @@
-import React, {useEffect} from "react";
-import {useDispatch, useSelector } from 'react-redux'
+import React from "react";
+import { useSelector } from 'react-redux'
 import {RootState} from "../reducers/index";
 
 //components
 import Explore from "./Explore";
 import News from "./News";
-
-//actions
-import {fetchTopData} from "../actions/index";
 
 //style
 import "../scss/topSection.scss";
@@ -15,21 +12,15 @@ import "../scss/topSection.scss";
 //assets
 import {vr, success} from "../img/index";
 import PathSvg from "../svg/top-path.svg";
-
 const TopSection: React.FC = () => {
-
-    const dispatch = useDispatch();
-    const topData = useSelector((state: RootState)=> state.data.topData);
-
-    useEffect(() => {
-        
-        dispatch(fetchTopData());
-        
-    }, [dispatch]);
+    
+    const topData = useSelector((state: RootState)=> state.data.topSection);
+    const loading = useSelector((state: RootState)=> state.ui.loading);
 
     return(
         <section id="top-section" className="sections">
-            {topData &&
+            {!loading ?
+            topData &&
             <div className="top-wrapper">
                 <div className="container">
                     <Explore explore={topData.explore}/>
@@ -39,6 +30,8 @@ const TopSection: React.FC = () => {
                     <img src={vr} alt="success" className="vr-img"/>
                     <img src={PathSvg} alt="path" className="path-svg" />                            
             </div>
+            :
+            <div className="container">Loading...</div>
             }      
         </section>
     )

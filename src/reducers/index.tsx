@@ -15,7 +15,9 @@ export interface AppState {
         endDate: string, 
         publishedDayCount: number, 
         body:string
-        }}
+        },
+        loading:boolean
+    }
 }
 
 const rootReducer =  combineReducers<AppState>({

@@ -2,7 +2,7 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector } from 'react-redux'
 import {RootState} from "../reducers/index";
 //actions
-import {fetchPositionsData} from "../actions/index";
+import {fetchLandingData} from "../actions/index";
 
 import PositionsList from "../components/PositionsList";
 import PositionContent from "../components/PositionContent";
@@ -16,18 +16,18 @@ import {addCircle} from "../svg/addCircle";
 const Panel: React.FC = () => {
 
     const dispatch = useDispatch();
-    const positionList = useSelector((state: RootState)=> state.data.positionList);
+    const positionList = useSelector((state: RootState)=> state.data.openPositions);
     const selectedItem = useSelector((state: RootState)=> state.ui.selectedPosition);
-
+    const loading = useSelector((state: RootState)=> state.ui.loading);
     useEffect(() => {
         
-        dispatch(fetchPositionsData()); //bütün ilanları çek
+        dispatch(fetchLandingData()); //bütün ilanları çek
         
     }, [dispatch])
-
     return(
         <div id="content">
-            <div className="container panel-container">
+            {!loading ? (
+                <div className="container panel-container">
 
                 <div className="panel-left-container">
                     <div className="panel-left-up">
@@ -48,6 +48,10 @@ const Panel: React.FC = () => {
                     <PositionDetail selectedItem={selectedItem} />
                 </div>
             </div>
+            ):(
+                <div className="container">Loading...</div>
+            )}
+            
         </div>
     )
 

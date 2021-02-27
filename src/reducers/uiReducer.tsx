@@ -1,10 +1,13 @@
 import {
     SELECT_POSITION,
-    SET_INITIAL_POSITION_ITEM
+    SET_INITIAL_POSITION_ITEM,
+    SET_UI_LOADING,
+    UNSET_UI_LOADING
     } from "../actions/types";
 
 const initialState:any = {
-    selectedPosition: {}  
+    selectedPosition: {},
+    loading: true  
 } 
 
 const uiReducer = (state = initialState, action:any) => {
@@ -14,6 +17,7 @@ const uiReducer = (state = initialState, action:any) => {
         case SET_INITIAL_POSITION_ITEM:
 
         return {
+          ...state,
           selectedPosition: action.payload ? action.payload[0] : {}
         }
 
@@ -21,9 +25,21 @@ const uiReducer = (state = initialState, action:any) => {
             
          //select position
           return {
+            ...state,
             selectedPosition: action.payload
           };
 
+        case SET_UI_LOADING:
+          return{
+            ...state,
+            loading:true
+          }
+
+          case UNSET_UI_LOADING:
+          return{
+            ...state,
+            loading:false
+          }
     
         default:
           return state;

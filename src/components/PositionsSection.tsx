@@ -1,8 +1,6 @@
-import React, {useEffect} from "react";
-import {useDispatch, useSelector } from 'react-redux'
+import React from "react";
+import { useSelector } from 'react-redux'
 import {RootState} from "../reducers/index";
-//actions
-import {fetchPositionsData} from "../actions/index";
 //components
 import PositionsList from "./PositionsList"
 import PositionContent from "./PositionContent"
@@ -15,25 +13,26 @@ import "../scss/positionsSection.scss";
 
 const PositionsSection: React.FC = () => {
 
-    const dispatch = useDispatch();
-    const positionList = useSelector((state: RootState)=> state.data.positionList);
+    const positionList = useSelector((state: RootState)=> state.data.openPositions);
     const selectedItem = useSelector((state: RootState)=> state.ui.selectedPosition);
-
-    useEffect(() => {
-        
-        dispatch(fetchPositionsData());
-        
-    }, [dispatch])
+    const loading = useSelector((state: RootState)=> state.ui.loading);
 
     return(
         <section id="positions-section">
-           <div className="positions-container container">   
-                <PositionsList list={positionList} isPanel={false}/>       
-                <PositionContent selectedItem={selectedItem} isPanel={false} />        
-           </div>
-           <div  className="positionsImage-container">
-                <img src={LaunchPng} alt="positionImg"/>  
-           </div>     
+            {!loading ? (
+                <>
+                    <div className="positions-container container">   
+                        <PositionsList list={positionList} isPanel={false}/>       
+                        <PositionContent selectedItem={selectedItem} isPanel={false} />        
+                    </div>
+                    <div  className="positionsImage-container">
+                        <img src={LaunchPng} alt="positionImg"/>  
+                    </div> 
+                </>
+            ):(
+                <div className="container">Loading</div>
+            )}
+               
         </section>
     )
 

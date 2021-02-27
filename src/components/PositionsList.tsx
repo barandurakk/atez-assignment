@@ -34,7 +34,7 @@ const PositionsList:React.FC<PositionListProps> = ({list, isPanel}:PositionListP
             (
             <>
                 <h1>Açık Pozisyonlar</h1>
-                <div className="positionsList-wrapper">   
+                <div className="positionsList-wrapper">  
                     {list &&
                         list.map((positionItem) => {
                                 if(positionItem.isPublished){

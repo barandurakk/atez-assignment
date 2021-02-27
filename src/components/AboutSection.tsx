@@ -1,8 +1,7 @@
-import React, {useEffect} from "react";
-import {useDispatch, useSelector } from 'react-redux'
+import React from "react";
+import {useSelector } from 'react-redux'
 import {RootState} from "../reducers/index";
-//actions
-import {fetchAboutData} from "../actions/index";
+
 //style
 import "../scss/aboutSection.scss";
 //assets
@@ -13,19 +12,13 @@ const logos = [Amazon, Ansible, CentOs, Docker, GIT, Html, Hyper, Indy, Jenkins,
 
 const AboutSection: React.FC = () => {
 
-    const dispatch = useDispatch();
-    const aboutData = useSelector((state: RootState)=> state.data.aboutData);
-    
-    useEffect(() => {
-        //about us action'ını çağırıyoruz
-        dispatch(fetchAboutData());
-    }, [dispatch])
-
+    const aboutData = useSelector((state: RootState)=> state.data.aboutUsSection);
+    const loading = useSelector((state: RootState)=> state.ui.loading);
     let i = 0; //resim array'ımızı maplerken bu değeri key ve alt için kullanıyorum.
-
     return(
         <section id="about-section" className="sections">
-            {aboutData &&
+            {!loading ?
+            aboutData &&
                 <div className="container about-container">
                     <div className="about-content">
                         <div className="about-header-wrapper">
@@ -53,6 +46,8 @@ const AboutSection: React.FC = () => {
                         <a href="#position-section">{actionSVG}</a>
                     </div>
                 </div>
+            :
+            <div className="container">Loading...</div>
             }
         </section>
     )

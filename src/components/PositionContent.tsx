@@ -24,7 +24,8 @@ type PositionContentProps = SelectedItemProps & isPanel
 const PositionContent:React.FC<PositionContentProps> = ({selectedItem, isPanel}:PositionContentProps) => {
     return(
         <div className= {` positionContent-container ${isPanel ? "panel" : "landing" }`} >
-            {!isPanel && selectedItem.isPublished ? 
+            {
+            !isPanel && selectedItem.isPublished ? 
             (
                 <>
                 {selectedItem.isPublished && <span>YAYINDA</span>}
@@ -40,12 +41,13 @@ const PositionContent:React.FC<PositionContentProps> = ({selectedItem, isPanel}:
                         className="positionTitle-input"
                         type="text"
                         value={selectedItem.title}
+                        readOnly={true}
                     />
                     <textarea  
                         className="positionBody-input"
                         rows={30}
                         value={selectedItem.body}
-                        
+                        readOnly={true}
                     />
                 </>
             )
