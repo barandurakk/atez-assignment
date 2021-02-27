@@ -5,7 +5,17 @@ import uiReducer from './uiReducer';
 
 export interface AppState {
     data: DataState | TopData | AboutUsData | positionObject[] | any
-    ui: {selectedPosition:number}
+    ui: {selectedPosition: {
+        id: number, 
+        title: string, 
+        isNew: boolean, 
+        isPublished: boolean,  
+        applyCount: number, 
+        startDate: string, 
+        endDate: string, 
+        publishedDayCount: number, 
+        body:string
+        }}
 }
 
 const rootReducer =  combineReducers<AppState>({

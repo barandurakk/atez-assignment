@@ -11,8 +11,7 @@ interface NewsProps {
         newsHeader: string,
         newsText: string,
         newsBtnText: string
-    }
-    
+    }  
 }
 
 const News: React.FC<NewsProps> = ({news}: NewsProps) => {

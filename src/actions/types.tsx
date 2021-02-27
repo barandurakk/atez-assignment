@@ -4,11 +4,10 @@
 export const FETCH_TOP_DATA = "FETCH_TOP_DATA";
 export const FETCH_ABOUT_DATA = "FETCH_ABOUT_DATA";
 export const FETCH_POSITIONS_DATA = "FETCH_POSITIONS_DATA";
-export const SET_DB_ERROR = "SET_DB_ERROR";
-export const CLEAR_DB_ERROR= "CLEAR_DB_ERROR"
 
 //ui
 export const SELECT_POSITION = "SELECT_POSITION";
+export const SET_INITIAL_POSITION_ITEM = "SET_INITIAL_POSITION_ITEM";
 
 export interface TopData {
     topSection:{          
@@ -34,7 +33,15 @@ export interface AboutUsData {
 }
 
 export interface positionObject {
-    id: number, title: string, isNew: boolean, isPublished: boolean, body:string
+    id: number, 
+    title: string, 
+    isNew: boolean, 
+    isPublished: boolean,  
+    applyCount: number, 
+    startDate: string, 
+    endDate: string, 
+    publishedDayCount: number, 
+    body:string
 }
 
 export type PositionData = positionObject[]
@@ -48,6 +55,6 @@ export interface DataState {
 
 //action types
 export interface FetchDataAction {
-    type: typeof FETCH_TOP_DATA | typeof FETCH_ABOUT_DATA | typeof FETCH_POSITIONS_DATA | typeof SET_DB_ERROR | typeof CLEAR_DB_ERROR,
+    type: typeof FETCH_TOP_DATA | typeof FETCH_ABOUT_DATA | typeof FETCH_POSITIONS_DATA  | typeof SET_INITIAL_POSITION_ITEM 
     payload?: DataState |  TopData |  AboutUsData | PositionData
 }

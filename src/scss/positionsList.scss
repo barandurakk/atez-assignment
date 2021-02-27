@@ -1,29 +1,73 @@
 @import './variables';
 @import './mixin';
 
-.positionsList-wrapper {
+.positionsList-container {
+    //landing stilleri
     &.landing {
-        .positionItem {
-            @include flex-row;
-            align-items: center;
-            padding: 12px 30px;
-            margin: 10px 0px;
-            cursor: pointer;
-            h3 {
-                font-size: 16px;
-                margin: 0;
-            }
-            span {
-                @include styledLabel;
-                font-size: 10px;
-                margin-left: 15px;
-            }
-            &.active {
-                border: 1px solid $font-blue;
-                border-radius: 30px;
+        box-sizing: border-box;
+        width: 40%;
+        min-width: 350px;
+        margin-right: 120px;
+        h1 {
+            margin-left: 30px;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 80px;
+        }
+        .positionsList-wrapper {
+            .positionItem {
+                @include flex-row;
+                align-items: center;
+                padding: 12px 30px;
+                margin: 10px 0px;
+                cursor: pointer;
+                h3 {
+                    font-size: 16px;
+                    margin: 0;
+                }
+                span {
+                    @include styledLabel;
+                    font-size: 10px;
+                    margin-left: 15px;
+                }
+                &.active {
+                    border: 1px solid $font-blue;
+                    border-radius: 30px;
+                }
             }
         }
     }
+    //panel stilleri
     &.panel {
+        .positionsList-wrapper {
+            .positionItem {
+                color: $black;
+                @include flex-row;
+                align-items: center;
+                justify-content: space-between;
+                padding: 12px 30px;
+                border-bottom: 1px $body-background solid;
+                cursor: pointer;
+                h3 {
+                    font-weight: 600;
+                    font-size: 14px;
+                    margin: 0;
+                    &.notPublished {
+                        color: $dark-gray;
+                    }
+                }
+                svg {
+                    display: none;
+                }
+                &.active {
+                    h3 {
+                        font-weight: 800;
+                    }
+                    svg {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }

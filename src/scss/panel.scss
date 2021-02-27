@@ -1,0 +1,58 @@
+@import './variables.scss';
+@import './mixin';
+
+.panel-container {
+    @include flex-row;
+    justify-content: space-between;
+    .panel-left-container {
+        width: 260px;
+        .panel-left-up {
+            @include flex-column;
+            @include paperBox;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            span {
+                display: flex;
+                align-content: center;
+                width: 100%;
+                background-color: $gray;
+                padding: 10px 30px;
+                color: $black;
+                font-weight: 600;
+            }
+            a {
+                @include flex-row-centered;
+                margin: 20px;
+                background-color: $font-blue;
+                color: $white;
+                height: 36px;
+                line-height: 36px;
+                font-size: 14px;
+                cursor: pointer;
+                border-radius: 4px;
+                svg {
+                    margin-right: 7px;
+                    align-self: center;
+                }
+            }
+        }
+        .panel-left-down {
+            @include paperBox;
+            border-radius: 6px;
+            padding: 15px 30px;
+            a {
+                font-weight: 800;
+                font-size: 16px;
+                margin: 0;
+                color: #000;
+            }
+        }
+    }
+    .panel-middle-container {
+        width: 650px;
+    }
+    .panel-right-container {
+        width: 230px;
+    }
+}

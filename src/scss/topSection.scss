@@ -22,6 +22,9 @@
             left: 1050px;
             bottom: 0px;
             z-index: 50;
+            @media (max-width: $xl) {
+                display: none;
+            }
         }
         .path-svg {
             position: absolute;

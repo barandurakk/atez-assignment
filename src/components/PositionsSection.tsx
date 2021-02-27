@@ -5,7 +5,7 @@ import {RootState} from "../reducers/index";
 import {fetchPositionsData} from "../actions/index";
 //components
 import PositionsList from "./PositionsList"
-import PositionDetail from "./PositionDetail"
+import PositionContent from "./PositionContent"
 //image
 import LaunchPng from "../img/launch.png";
 
@@ -28,12 +28,8 @@ const PositionsSection: React.FC = () => {
     return(
         <section id="positions-section">
            <div className="positions-container container">   
-            <div className="positionsList-container">
-                <h1>Açık Pozisyonlar</h1>
-                <PositionsList list={positionList} isPanel={false}/>
-            </div>           
-                <PositionDetail selectedItemId={selectedItem} list={positionList} />
-                       
+                <PositionsList list={positionList} isPanel={false}/>       
+                <PositionContent selectedItem={selectedItem} isPanel={false} />        
            </div>
            <div  className="positionsImage-container">
                 <img src={LaunchPng} alt="positionImg"/>  

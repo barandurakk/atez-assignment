@@ -1,19 +1,25 @@
 import {
-    SELECT_POSITION
+    SELECT_POSITION,
+    SET_INITIAL_POSITION_ITEM
     } from "../actions/types";
 
 const initialState:any = {
-    selectedPosition: 1  
+    selectedPosition: {}  
 } 
 
 const uiReducer = (state = initialState, action:any) => {
 
     switch (action.type) {
 
+        case SET_INITIAL_POSITION_ITEM:
+
+        return {
+          selectedPosition: action.payload ? action.payload[0] : {}
+        }
+
         case SELECT_POSITION:
             
          //select position
-         console.log("selectReducer: ", action.payload);
           return {
             selectedPosition: action.payload
           };

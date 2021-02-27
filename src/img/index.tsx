@@ -1,3 +1,4 @@
+//aboutUs
 export {default as Amazon} from "./Amazon.png"; 
 export  {default as Ansible} from "./Ansible.png"; 
 export  {default as CentOs} from "./CentOS.png"; 
@@ -13,4 +14,11 @@ export  {default as NodeJS} from "./NodeJS.png";
 export  {default as Postman} from "./Postman.png"; 
 export  {default as ReactLogo} from "./ReactLogo.png"; 
 export  {default as Redis} from "./Redis.png"; 
-export  {default as SQL} from "./SQL.png";; 
+export  {default as SQL} from "./SQL.png"; 
+
+//top
+export  {default as success} from "./success.png"; 
+export  {default as vr} from "./vr.png"; 
+
+//position
+export  {default as launch} from "./launch.png"; 

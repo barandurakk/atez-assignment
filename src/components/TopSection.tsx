@@ -13,8 +13,7 @@ import {fetchTopData} from "../actions/index";
 import "../scss/topSection.scss";
 
 //assets
-import SuccessPng from "../img/success.png";
-import VrPng from "../img/vr.png";
+import {vr, success} from "../img/index";
 import PathSvg from "../svg/top-path.svg";
 
 const TopSection: React.FC = () => {
@@ -26,7 +25,7 @@ const TopSection: React.FC = () => {
         
         dispatch(fetchTopData());
         
-    }, [dispatch])
+    }, [dispatch]);
 
     return(
         <section id="top-section" className="sections">
@@ -36,8 +35,8 @@ const TopSection: React.FC = () => {
                     <Explore explore={topData.explore}/>
                     <News news={topData.news}/>
                 </div>
-                    <img src={SuccessPng} alt="success" className="success-img"/>
-                    <img src={VrPng} alt="success" className="vr-img"/>
+                    <img src={success} alt="success" className="success-img"/>
+                    <img src={vr} alt="success" className="vr-img"/>
                     <img src={PathSvg} alt="path" className="path-svg" />                            
             </div>
             }      

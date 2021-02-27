@@ -5,9 +5,8 @@ import {RootState} from "../reducers/index";
 import {fetchAboutData} from "../actions/index";
 //style
 import "../scss/aboutSection.scss";
-//images
+//assets
 import {Amazon, Ansible, CentOs, Docker, GIT, Html, Hyper, Indy, Jenkins, Kafka, Kubernetes, NodeJS, Postman, ReactLogo, Redis, SQL} from "../img/index";
-//svg
 import {actionSVG} from "../svg/actionArrow";
 
 const logos = [Amazon, Ansible, CentOs, Docker, GIT, Html, Hyper, Indy, Jenkins, Kafka, Kubernetes, NodeJS, Postman, ReactLogo, Redis, SQL];

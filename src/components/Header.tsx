@@ -14,7 +14,7 @@ const {pathname} = useLocation();
         <div id="header" className={`${pathname === "/panel" && "panel" }`}>
             <div id="header-content">
                 <div className="branding-wrapper">
-                    <img src={LogoSvg} alt="Atez Logo" />
+                <Link to="/"><img src={LogoSvg} alt="Atez Logo" /></Link>
                 </div>       
                     <div className="navMenu-wrapper">
                     <ul>

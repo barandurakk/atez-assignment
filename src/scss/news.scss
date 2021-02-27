@@ -2,16 +2,15 @@
 @import './mixin';
 
 #news-container {
-    display: flex;
+    @include flex-row;
     justify-content: flex-end;
     margin-top: 100px;
     .news-content {
         box-sizing: border-box;
         @include flex-column;
         justify-content: space-between;
-        width: 542px;
-        background: transparent linear-gradient(90deg, $font-blue 0%, $purple 100%) 0% 0% no-repeat padding-box;
         width: 550px;
+        background: transparent linear-gradient(90deg, $font-blue 0%, $purple 100%) 0% 0% no-repeat padding-box;
         box-shadow: 0px 0px 59px #00000075;
         z-index: 150;
         border-radius: 20px;
@@ -36,10 +35,10 @@
             }
             a {
                 @include primary-button;
+                @include flex-row-centered;
                 border-color: #fff;
                 padding: 7px 20px;
-                display: flex;
-                justify-content: center;
+                border-width: 1px;
                 svg {
                     fill: #fff;
                 }
