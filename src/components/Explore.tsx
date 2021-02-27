@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from 'react-router-hash-link';
 
 //styles
 import "../scss/explore.scss";
@@ -21,7 +22,7 @@ const Explore: React.FC<ExploreProps> = ({explore}: ExploreProps) => {
             <div>
                 <h1>{explore.mainHeader.slice(0,23)} <br/> {explore.mainHeader.slice(23,explore.mainHeader.length)}</h1>
                 <h3>{explore.exploreText}</h3>
-                <a href="#about-section">{explore.exploreButtonText}</a>
+                <HashLink to="#about-section" smooth={true}>{explore.exploreButtonText}</HashLink>
             </div>
             }
            

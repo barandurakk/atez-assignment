@@ -7,7 +7,7 @@ import "../scss/header.scss";
 
 
 const Header: React.FC= () => {
-const {pathname} = useLocation();  
+    const {pathname} = useLocation();  
 
     return(
         //eğer paneldeyse header'ın stilini değiştiriyorum.

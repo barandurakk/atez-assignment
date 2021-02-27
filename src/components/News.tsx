@@ -1,4 +1,5 @@
 import React from "react";
+import { HashLink } from 'react-router-hash-link';
 
 //styles
 import "../scss/news.scss";
@@ -25,7 +26,7 @@ const News: React.FC<NewsProps> = ({news}: NewsProps) => {
                <p>{news.newsText}</p>
                <div>
                     <span>{news.newsBtnText}</span>
-                    <a href="#positions-section">{actionSVG}</a>
+                    <HashLink to="#positions-section" smooth={true}>{actionSVG}</HashLink>
                 </div>      
             </div>
             }
