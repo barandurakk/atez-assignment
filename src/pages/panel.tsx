@@ -32,11 +32,11 @@ const Panel: React.FC = () => {
                 <div className="panel-left-container">
                     <div className="panel-left-up">
                         <span>İlanlar</span>
-                        <a>{addCircle}İlan Oluştur</a>
+                        <a href="#">{addCircle}İlan Oluştur</a>
                         <PositionsList isPanel={true} list={positionList} />
                     </div>
                     <div className="panel-left-down">
-                        <a>E-posta Abone</a>
+                        <a href="#">E-posta Abone</a>
                     </div>
                 </div>
 

@@ -23,6 +23,9 @@ type PositionList = {list: positionObject[] };
 type isPanel = {isPanel: boolean};
 type PositionListProps = PositionList & isPanel;
 
+const handleSelect  = (dispatch:any, item:any) => {
+    dispatch({type: SELECT_POSITION, payload: item});
+}
 
 const PositionsList:React.FC<PositionListProps> = ({list, isPanel}:PositionListProps) => {
     const dispatch = useDispatch()
@@ -30,18 +33,16 @@ const PositionsList:React.FC<PositionListProps> = ({list, isPanel}:PositionListP
    
     return(
         <div className={`positionsList-container ${isPanel ? "panel" : "landing"}`}>
-            {!isPanel ? 
-            (
-            <>
-                <h1>Açık Pozisyonlar</h1>
-                <div className="positionsList-wrapper">  
+            
+             <div className="positionsList-wrapper">  
                     {list &&
                         list.map((positionItem) => {
+                            if(!isPanel){
                                 if(positionItem.isPublished){
                                     return(
                                         <div 
                                         onClick={()=>{
-                                            dispatch({type: SELECT_POSITION, payload: positionItem});
+                                            handleSelect(dispatch, positionItem);
                                         }}
                                         key={positionItem.id}
                                         className={`positionItem ${selectedItem.id === positionItem.id ? "active" : "" }`}
@@ -53,39 +54,27 @@ const PositionsList:React.FC<PositionListProps> = ({list, isPanel}:PositionListP
                                     )                  
                                 }else {
                                     return null;
-                                }              
+                                }          
+                            }else{
+                                return(
+                                    <div 
+                                    onClick={()=>{
+                                        handleSelect(dispatch, positionItem);
+                                    }}
+                                    key={positionItem.id}
+                                    className={`positionItem ${selectedItem.id === positionItem.id ? "active" : "" }`}
+                                    >
+                                        <h3 className={`${!positionItem.isPublished ? "notPublished" : "" }`}>
+                                            {positionItem.title}
+                                        </h3>
+                                        {actionSVG}
+                                    </div>   
+                                )            
+                            }
+                                   
                         })
                     }
                 </div>
-            </>
-            )
-            :
-            (
-            <>
-                <div className="positionsList-wrapper">  
-                    {list &&
-                        list.map((positionItem) => {
-                                    return(
-                                        <div 
-                                        onClick={()=>{
-                                            dispatch({type: SELECT_POSITION, payload: positionItem});
-                                        }}
-                                        key={positionItem.id}
-                                        className={`positionItem ${selectedItem.id === positionItem.id ? "active" : "" }`}
-                                        >
-                                            <h3 className={`${!positionItem.isPublished ? "notPublished" : "" }`}>
-                                                {positionItem.title}
-                                            </h3>
-                                            {actionSVG}
-                                        </div>   
-                                    )                                   
-                        })
-                    } 
-                </div> 
-            </>
-            )
-            }
-           
         </div> 
     )
 }
