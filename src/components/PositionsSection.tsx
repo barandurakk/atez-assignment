@@ -22,7 +22,10 @@ const PositionsSection: React.FC = () => {
             {!loading ? (
                 <>
                     <div className="positions-container container">   
-                        <PositionsList list={positionList} isPanel={false}/>       
+                        <div>
+                            <h1>Açık Pozisyonlar</h1>
+                            <PositionsList list={positionList} isPanel={false}/>  
+                        </div>     
                         <PositionContent selectedItem={selectedItem} isPanel={false} />        
                     </div>
                     <div  className="positionsImage-container">

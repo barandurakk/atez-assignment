@@ -10,7 +10,9 @@ import Header from "./components/Header"
 import "./scss/_globalStyles.scss";
 
 //create history
-export const history = createBrowserHistory();
+export const history = createBrowserHistory({
+  basename:"/atez-odev"
+});
 
 const App = () => {
 

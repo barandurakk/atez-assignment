@@ -14,7 +14,7 @@ export const fetchLandingData = () => (dispatch: DispatchAssets) => {
     
         //database query
         dispatch({type: SET_UI_LOADING});
-        fetch("./DB.json"
+        fetch("/DB.json"
         ,{
           headers:{
             "Content-Type":"application/json",

@@ -36,20 +36,15 @@
             }
         }
         .about-images-wrapper {
+            box-sizing: border-box;
             display: grid;
-            grid-template-columns: repeat(8, 135px);
-            grid-template-rows: repeat(2, 135px);
+            max-width: 1200px;
+            grid-template-columns: repeat(8, 1fr);
             gap: 20px 20px;
-            margin-top: 80px;
+            margin: 80px auto 0px auto;
             place-items: center;
             @media (max-width: $lg) {
-                grid-template-columns: repeat(6, 135px);
-                grid-template-rows: repeat(3, 135px);
-            }
-            @media (max-width: $sm) {
-                grid-template-columns: repeat(4, 135px);
-                grid-template-rows: repeat(4, 135px);
-                gap: 5px 5px;
+                grid-template-columns: repeat(6, 1fr);
             }
             div {
                 @include paperBox;

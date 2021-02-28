@@ -7,6 +7,12 @@
         @include flex-row;
         justify-content: space-between;
         align-items: center;
+        h1 {
+            margin-left: 30px;
+            font-size: 40px;
+            font-weight: 600;
+            margin-bottom: 80px;
+        }
     }
     .positionsImage-container {
         @include flex-row-centered;
