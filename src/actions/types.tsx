@@ -59,5 +59,5 @@ export interface FetchDataAction {
      | typeof SET_INITIAL_POSITION_ITEM
      | typeof UNSET_UI_LOADING 
      | typeof SET_UI_LOADING
-    payload?: DataState 
+    payload?: DataState |  TopData |  AboutUsData | PositionData
 }

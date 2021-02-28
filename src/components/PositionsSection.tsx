@@ -19,19 +19,31 @@ const PositionsSection: React.FC = () => {
 
     return(
         <section id="positions-section">
-            {!loading ? (
+            {!loading ? 
+            (
                 <>
-                    <div className="positions-container container">   
+                <div className="positions-container container">   
+                    {positionList.length >0 ? (
+                            <>
                         <div style={{alignSelf:"flex-start"}}>
                             <h1 className="listHeader">Açık Pozisyonlar</h1>
                             <PositionsList list={positionList} isPanel={false}/>  
                         </div>     
-                        <PositionContent selectedItem={selectedItem} isPanel={false} />        
-                    </div>
-                    <div  className="positionsImage-container">
-                        <img src={LaunchPng} alt="positionImg"/>  
-                    </div> 
+                        <PositionContent selectedItem={selectedItem} isPanel={false} />  
+                        </>
+                    ):(
+                        <div className="no-content">
+                            Şu anda açık bir pozisyon bulunmamaktadır.
+                        </div>
+                    )} 
+                </div>
+
+                <div  className="positionsImage-container">
+                    <img src={LaunchPng} alt="positionImg"/>  
+                </div> 
+                
                 </>
+
             ):(
                 <div className="container">Loading</div>
             )}

@@ -14,6 +14,11 @@
                 margin: 0px 0px 80px 30px;
             }
         }
+        .no-content {
+            font-size: 50px;
+            font-weight: 800;
+            z-index: 150;
+        }
     }
     .positionsImage-container {
         @include flex-row-centered;

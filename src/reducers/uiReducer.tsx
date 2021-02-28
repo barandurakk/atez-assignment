@@ -2,7 +2,7 @@ import {
     SELECT_POSITION,
     SET_INITIAL_POSITION_ITEM,
     SET_UI_LOADING,
-    UNSET_UI_LOADING
+    UNSET_UI_LOADING,
     } from "../actions/types";
 
 const initialState:any = {
@@ -18,7 +18,7 @@ const uiReducer = (state = initialState, action:any) => {
 
         return {
           ...state,
-          selectedPosition: action.payload ? action.payload[0] : {}
+          selectedPosition: action.payload[0] ? action.payload[0] : {}
         }
 
         case SELECT_POSITION:

@@ -34,8 +34,8 @@ const PositionContent:React.FC<PositionContentProps> = ({selectedItem, isPanel}:
                 <a>BAŞVUR</a>  
                 </>
             )
-            :
-            (
+            : isPanel ?
+            ( 
                 <>
                     <input 
                         className="positionTitle-input"
@@ -50,7 +50,7 @@ const PositionContent:React.FC<PositionContentProps> = ({selectedItem, isPanel}:
                         readOnly={true}
                     />
                 </>
-            )
+            ) : null
 
             }           
                                 
