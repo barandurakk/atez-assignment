@@ -7,10 +7,16 @@
         @include flex-column;
         .about-content {
             @include flex-row;
+            @media (max-width: $lg) {
+                @include flex-column-centered;
+            }
             .about-header-wrapper {
                 @include flex-column;
                 justify-content: flex-end;
                 width: 30%;
+                @media (max-width: $lg) {
+                    width: 70%;
+                }
                 h1 {
                     font-size: 60px;
                     font-weight: 600;
@@ -45,6 +51,9 @@
             place-items: center;
             @media (max-width: $lg) {
                 grid-template-columns: repeat(6, 1fr);
+            }
+            @media (max-width: $md) {
+                grid-template-columns: repeat(5, 1fr);
             }
             div {
                 @include paperBox;

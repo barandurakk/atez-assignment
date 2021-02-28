@@ -22,8 +22,8 @@ const PositionsSection: React.FC = () => {
             {!loading ? (
                 <>
                     <div className="positions-container container">   
-                        <div>
-                            <h1>Açık Pozisyonlar</h1>
+                        <div style={{alignSelf:"flex-start"}}>
+                            <h1 className="listHeader">Açık Pozisyonlar</h1>
                             <PositionsList list={positionList} isPanel={false}/>  
                         </div>     
                         <PositionContent selectedItem={selectedItem} isPanel={false} />        

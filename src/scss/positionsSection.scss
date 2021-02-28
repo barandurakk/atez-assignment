@@ -7,11 +7,12 @@
         @include flex-row;
         justify-content: space-between;
         align-items: center;
-        h1 {
-            margin-left: 30px;
-            font-size: 40px;
-            font-weight: 600;
-            margin-bottom: 80px;
+        div {
+            .listHeader {
+                font-size: 40px;
+                font-weight: 600;
+                margin: 0px 0px 80px 30px;
+            }
         }
     }
     .positionsImage-container {

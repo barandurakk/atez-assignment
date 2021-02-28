@@ -28,11 +28,14 @@ a {
     @media (max-width: $md) {
         width: 750px;
     }
-    @media (max-width: $sm) {
-        width: 700px;
-    }
 }
 
 .sections {
     margin-bottom: 80px;
+    @media (max-width: $lg) {
+        margin-bottom: 40px;
+    }
+    @media (max-width: $md) {
+        margin-bottom: 40px;
+    }
 }

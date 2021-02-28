@@ -6,6 +6,9 @@
     justify-content: space-between;
     .panel-left-container {
         width: 260px;
+        @media (max-width: $md) {
+            width: 200px;
+        }
         .panel-left-up {
             @include flex-column;
             @include paperBox;
@@ -51,8 +54,17 @@
     }
     .panel-middle-container {
         width: 650px;
+        @media (max-width: $lg) {
+            width: 450px;
+        }
+        @media (max-width: $md) {
+            width: 300px;
+        }
     }
     .panel-right-container {
         width: 230px;
+        @media (max-width: $md) {
+            width: 210px;
+        }
     }
 }

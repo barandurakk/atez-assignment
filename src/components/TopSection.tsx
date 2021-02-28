@@ -22,10 +22,10 @@ const TopSection: React.FC = () => {
             {!loading ?
             topData &&
             <div className="top-wrapper">
-                <div className="container">
+                
                     <Explore explore={topData.explore}/>
                     <News news={topData.news}/>
-                </div>
+                
                     <img src={success} alt="success" className="success-img"/>
                     <img src={vr} alt="success" className="vr-img"/>
                     <img src={PathSvg} alt="path" className="path-svg" />                            
